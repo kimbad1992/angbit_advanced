@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+
+@media all and (max-width: 360px) {
+	html {
+		font-size: .875rem !important;
+	}
+}
+
+@media all and (min-width: 361px) and (max-width: 575px) {
+	html {
+		font-size: .938rem !important;
+	}
+}
+
+html {
+	height: 100% !important;
+}
+
+body {
+	padding-top: 70px;
+	height: 100% !important;
+	flex-direction: column !important;
+	display: flex !important;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	background-color: #f7fafc;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+
+@media (max-width: 767px) {
+	body {
+		padding-top: 60px;
+	}
+}
+
+@media (max-width: 575px){
+	.user-profile-header{
+		padding-left: 1.5rem;
+	}
+}
+
+.ranking-board{
+	padding: 1.5rem;
+	margin-top: .75rem;
+	margin-bottom: 2rem;
+	background-color: #fff;
+	border-radius: .75rem;
+	box-shadow: 0 10px 20px 0 rgba(15, 40, 65, 0.1);
+}
+
+.rank-row {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.rank-coinshow{
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 600;
+	margin-left: .5rem;
+	background-color: #a4bcff;
+	color: #000000;
+}
+
+.rank-coinshow:hover{
+	background-color: #487fb0;
+	color: #fff !important;
+}
+
+.page-link {
+	background-color: #e7ebf0;
+	margin: 0 0.4rem;
+	border : none;
+	border-radius: 0.5rem !important;
+	transition: background-color .15s ease-in-out;
+	color : #81888f !important;
+}
+.page-link:hover {
+	background-color: #5fa3e3;
+	color: white!important;
+}
+.page-link.activated {
+	background-color: #5fa3e3;
+	box-shadow: 2px 5px 10px 0px rgb(40 70 90 / 30%);
+	color : white!important;
+}
+
+.popover{
+	max-width : 1000px!important;
+	width : 500px;
+	/*max-width: 100%; !* Max Width of the popover (depending on the container!) *!*/
+}

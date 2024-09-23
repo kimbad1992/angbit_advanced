@@ -1,0 +1,118 @@
+@charset "UTF-8";
+
+ a:link { text-decoration:none; color:#000000;}
+
+ a:visited { text-decoration:none;color:#000000;}
+
+ a:active {text-decoration:none; color:#000000; }
+
+ a:hover { text-decoration:none; color:#EDA900;}
+
+
+html {
+	height: 100% !important;
+}
+
+body {
+	padding-top: 70px;
+	height: 100% !important;
+	flex-direction: column !important;
+	display: flex !important;
+	font-family: Noto Sans KR;
+	font-style: normal;
+	background-color: #f7fafc;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+	
+input:-ms-input-placeholder {color:#a8a8a8; }
+input::-webkit-input-placeholder {color:#a8a8a8; }
+input::-moz-placeholder {color:#a8a8a8; }	
+	
+textarea {
+    
+    border: none;
+    resize: none;
+  }	
+	
+	
+.btnbox{
+	height:100px;
+	weight:auto;
+}
+.row_free{
+	
+	font-color:black;
+	height:50px;
+	weight:auto;
+}
+
+.box{
+	 border: 1px solid red;
+	 width : 100px;
+  	 height: 100px;
+}
+
+/* -----------section----------- 영역 */
+section {
+	width: 60%;
+	border-top: solid;
+	border-top-color: #9ACDE6;
+	border-top-width: 4;
+}
+
+.board_search {
+	float: right;
+	margin-right: 50px;
+	width: 250px;
+	height: 40px;
+	border: 0;
+}
+
+.board_search_parent::after {
+	display:block;
+	clear:both;
+	content:"";
+}
+
+.board_search_button {
+	background-color: #5798D7;
+	font-family: pretend;
+	font-size: 17px;
+	color: white;
+}
+
+.view_count {
+	width: 90px;
+	float: right;
+	font-size: 13px;
+	margin-right: 50px;
+	margin-top: 10px;
+}
+
+.view_count_parent::after {
+	display:block;
+	clear:both;
+	content:"";
+}
+
+.board_table {
+	width: 90%;
+}
+
+.write_btn {
+	float: right;
+}
+
+.write_btn_parent::after {
+	display:block;
+	clear:both;
+	content:"";
+}
+
+.pagenav_a {
+	border: 0.1px solid rgba(65, 75, 70, 0.06);
+	color: #6c757d;
+}
+
+

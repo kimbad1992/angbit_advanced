@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    jdbc-url: jdbc:h2:file:~/testdb;AUTO_SERVER=TRUE
+    username: sa
+    password:
+    type: com.zaxxer.hikari.HikariDataSource
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  batch:
+    jdbc:
+      initialize-schema: always
+  jpa:
+    hibernate:
+      ddl-auto: update # create, create-drop, validate, update, none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  # H2 ?? (Dev?)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console  # H2 ??? ???? ??
+
+# Swagger ??
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui
+
+# Logging ??
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){green} %clr(%-5level) %clr(${PID:-}){magenta} %clr(---){faint} [PayrollCalc] %clr(%logger - %M{10}){cyan} - %msg%n)"
+  level:
+    root: INFO
+    com.angbit: DEBUG
+    # Hibernate Query Result Log
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.loader.Loader: DEBUG

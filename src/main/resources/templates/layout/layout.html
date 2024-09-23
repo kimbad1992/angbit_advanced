@@ -1,0 +1,25 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:replace="~{fragments/head :: title}">페이지 제목</title>
+    <!-- Common meta tag, Bootstrap, js -->
+    <th:block th:replace="~{fragments/head}"></th:block>
+    <!-- Custom styles -->
+    <link th:href="@{css/styles.css}" rel="stylesheet">
+</head>
+<body>
+<!-- Common header -->
+<header th:replace="~{common/header :: header}"></header>
+
+<!-- 메인 콘텐츠 영역 -->
+<main>
+    <div th:replace="~{::content}"></div>
+</main>
+
+<!-- Footer -->
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+</body>
+<th:block th:replace="~{fragments/config :: config}"></th:block>
+</html>

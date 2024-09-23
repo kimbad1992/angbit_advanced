@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+section {
+	padding-top: 7px;
+	float: left;
+	z-index: 999;
+}
+
+main::after {
+ 	display:block;
+	clear:both;
+	content:"";
+}
+
+.section1 {
+	width: 60%;
+}
+
+/* Coin List Table */
+
+.coinlist-a {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+#coinlist-card {
+	width: 450px;
+	font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+#coinlist-table tr {
+	height: 50px;
+}
+
+#coinlist-table td {
+	font-size: 13px;
+
+}
+
+#coinlist-table th {
+
+}
+
+.coinlist-price {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 500;
+	width: 90px;
+	height: 40px;
+}
+
+/* 코인 타이틀 */
+.coinTitle-card {
+	width: 990px;
+ 	height: 150px;
+
+}
+
+#coinTitle-body {
+	font-family: 'Noto Sans KR', sans-serif;
+} 
+
+#coinTitle-coinname {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+#coinTitle-coincode {
+	font-size: 14px;
+}
+
+#coinTitle-tp {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.coinTitle-table th {
+	background-color: #00000008;
+	width: 25%;
+}
+
+.coinTitle-table td {
+	width: 25%;
+}
+
+.coinTitle-coinsumr {
+	font-family: 'Gowun Batang', serif;
+}
+
+/* 스크롤바 설정*/
+.coinTitle-card::-webkit-scrollbar{
+    width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.coinTitle-card::-webkit-scrollbar-thumb{
+    height: 17%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* 스크롤바 둥글게 설정    */
+    border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.coinTitle-card::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+
+/* OrderBook Table */
+#orderbook-div {
+	width: 495px;
+	height: 600px;
+	overflow: auto;
+	margin-right: 15px;
+}
+
+#orderbook-table tr, td {
+	height: 45px;
+	font-size: 14px;
+}
+
+.orderbook-ap, .orderbook-bp {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.orderbook-td-ap, .orderbook-td-bp {
+	background-color: #0d6efd0d !important;
+}
+
+.as {
+	text-align: right;
+	padding-right: 2px;
+}
+
+.orderbook-td-info {
+	font-size: 13px;
+}
+
+/* Trade table */
+#trade-table tr, td, th {
+	height: 26px !important;
+	padding: 5px !important;
+}
+
+#trade-table td {
+	font-size: 12px;
+}
+
+#trade-table tr {
+	vertical-align: middle;
+}
+
+#trade-table th {
+
+}
+
+/* 스크롤바 설정*/
+.orderbook-div::-webkit-scrollbar{
+    width: 6px;
+}
+
+/* 스크롤바 막대 설정*/
+.orderbook-div::-webkit-scrollbar-thumb{
+    height: 17%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* 스크롤바 둥글게 설정    */
+    border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.orderbook-div::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+
+/* 코인차트 */
+.coinChart {
+	width: 990px;
+	height: 452px;
+}
+
+/* orderSection */
+.orderSection {
+/*  	width: 990px;  */
+}
+
+/* 매매창 */
+.order-card {
+	width: 480px;
+	height: 520px;
+}
+
+#order-card-body {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+}
+
+.order-form {
+	width: 280px;
+	height: 38px;
+	text-align: right;
+}
+
+#order-div-amt-butn {
+	width: 280px;
+}
+
+.order-form-amt-butn {
+	width: 60px;
+}
+
+.order-form-reset {
+	width: 100px;
+	height: 45px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+}
+
+.order-form-submit {
+	width: 280px;
+	height: 45px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	color: white;
+}
+
+.sell-form {
+	width: 280px;
+	height: 38px;
+	text-align: right;
+}
+
+#sell-div-amt-butn {
+	width: 280px;
+}
+
+.sell-form-amt-butn {
+	width: 60px;
+}
+
+.sell-form-reset {
+	width: 100px;
+	height: 45px;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sell-form-submit {
+	width: 280px;
+	height: 45px;
+	font-family: 'Noto Sans KR', sans-serif;
+	color: white;
+}
+
+
+/* 차트 */
+.tv-lightweight-charts {
+	overflow : visible!important;
+}
+
+.c-buttonarea {
+	margin-left : 10px;
+	margin-top : 5px;
+	height : 30px;
+}
+
+.c-buttonarea-button {
+	background-color : #ffffff;
+	border-style: none;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.c-buttonarea-button:hover {
+	box-shadow:200px 0 0 0 rgba(72,127,176,1) inset;
+	background-color: #487fb0;
+	color: #fff !important;
+	transition: color .2s ease-in;
+	border-radius: 3px;
+}
+
+.legend {
+	position: absolute;
+	right: 150px;
+	top: 12px;
+	z-index: 1;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+
+.btnClicked {
+	color: #fff;
+	background-color: #487fb0;
+	border-radius: 3px;
+}
+
+/* OrderList */
+
+.orderList-table {
+	width: 990px;
+}
+
+.orderList-table td {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+.modal-title {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+.modal-body {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.modal-btn {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+/* 링크 */
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
