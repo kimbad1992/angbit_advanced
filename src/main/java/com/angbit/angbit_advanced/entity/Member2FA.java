@@ -1,6 +1,7 @@
 package com.angbit.angbit_advanced.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -26,7 +27,8 @@ public class Member2FA {
     public Member2FA() {
     }
 
-    public Member2FA(Member member) {
+    @Builder
+    public Member2FA(Member member, Boolean twoFactorEnabled, String twoFactorSecret) {
         this.member = member;
         this.memberId = member.getId();
     }

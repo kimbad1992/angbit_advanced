@@ -1,6 +1,7 @@
 package com.angbit.angbit_advanced.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -29,7 +30,8 @@ public class MemberOAuth {
     public MemberOAuth() {
     }
 
-    public MemberOAuth(Member member) {
+    @Builder
+    public MemberOAuth(Member member, String oauthProvider, String oauthProviderId, String oauthProfilePicture) {
         this.member = member;
         this.memberId = member.getId();
     }

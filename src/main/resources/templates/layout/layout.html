@@ -1,23 +1,25 @@
 <!-- layout.html -->
 <!DOCTYPE html>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-    <title th:replace="~{fragments/head :: title}">페이지 제목</title>
-    <!-- Common meta tag, Bootstrap, js -->
+    <!-- 공통 메타태그, Bootstrap, js -->
     <th:block th:replace="~{fragments/head}"></th:block>
-    <!-- Custom styles -->
-    <link th:href="@{css/styles.css}" rel="stylesheet">
+    <!-- 커스텀 스타일 -->
+    <link th:href="@{css/common.css}" rel="stylesheet">
 </head>
 <body>
-<!-- Common header -->
-<header th:replace="~{common/header :: header}"></header>
+<!-- 공통 헤더 -->
+<header th:replace="~{fragments/topbar :: topbar}"></header>
 
 <!-- 메인 콘텐츠 영역 -->
 <main>
-    <div th:replace="~{::content}"></div>
+    <div layout:fragment="content">
+        <!-- 기본 콘텐츠가 있다면 여기에 작성 -->
+    </div>
 </main>
 
-<!-- Footer -->
+<!-- 푸터 -->
 <footer th:replace="~{fragments/footer :: footer}"></footer>
 
 </body>

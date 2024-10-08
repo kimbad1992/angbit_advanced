@@ -1,6 +1,7 @@
 package com.angbit.angbit_advanced.entity;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
@@ -24,6 +25,7 @@ public class MemberRole {
     public MemberRole() {
     }
 
+    @Builder
     public MemberRole(Member member, String role) {
         this.member = member;
         this.memberId = member.getId();

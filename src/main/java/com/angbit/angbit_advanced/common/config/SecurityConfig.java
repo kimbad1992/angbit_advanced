@@ -30,11 +30,6 @@ public class SecurityConfig {
     MemberService memberService;
 
     @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         /* 경로별 권한 설정 */
@@ -54,7 +49,9 @@ public class SecurityConfig {
                             new AntPathRequestMatcher("/swagger-ui/**"),
                             new AntPathRequestMatcher("/swagger-resources/**"),
                             // H2 Console
-                            new AntPathRequestMatcher("/h2-console/**")
+                            new AntPathRequestMatcher("/h2-console/**"),
+                            // 회원가입
+                            new AntPathRequestMatcher("/signup")
                     )
                     .permitAll()
                     .anyRequest().authenticated()
@@ -80,7 +77,7 @@ public class SecurityConfig {
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login") // 로그인 페이지 경로 설정
                         .loginProcessingUrl("/login_request") // 로그인 처리 경로 설정
-                        .defaultSuccessUrl("/main", true) // 로그인 성공 후 기본 리디렉션 경로 설정
+                        .defaultSuccessUrl("/", true) // 로그인 성공 후 기본 리디렉션 경로 설정
                         .failureUrl("/login?error=true") // 로그인 실패 후 리디렉션 경로 설정
                         .permitAll()
                 )

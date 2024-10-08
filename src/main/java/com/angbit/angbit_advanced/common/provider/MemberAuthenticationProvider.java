@@ -10,8 +10,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,9 +20,12 @@ public class MemberAuthenticationProvider extends DaoAuthenticationProvider {
     @Autowired
     private MemberService memberService;
 
-    public MemberAuthenticationProvider(UserDetailsService userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {
-        this.setUserDetailsService(userDetailsService);
-        this.setPasswordEncoder(bCryptPasswordEncoder);
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public MemberAuthenticationProvider(MemberService memberService, PasswordEncoder passwordEncoder) {
+        this.setUserDetailsService(memberService);
+        this.setPasswordEncoder(passwordEncoder);
     }
 
     @Override
@@ -34,9 +36,7 @@ public class MemberAuthenticationProvider extends DaoAuthenticationProvider {
         MemberDetails memberDetail = (MemberDetails) memberService.loadUserByUsername(username);
         String dbPassword = memberDetail.getPassword(); // 이미 암호화된 값
 
-        log.info("Auth");
-
-        if (!getPasswordEncoder().matches(password, dbPassword)) {
+        if (!passwordEncoder.matches(password, dbPassword)) {
             throw new BadCredentialsException("아이디 또는 비밀번호가 일치하지 않습니다.");
         }
 

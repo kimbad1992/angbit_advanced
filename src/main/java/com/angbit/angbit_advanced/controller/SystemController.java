@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SystemController {
 
+    @GetMapping("/")
+    public String mainPage() {
+        return "index"; // 로그인 성공 후 메인 페이지
+    }
+
     @RequestMapping("/login")
     public String login(Authentication auth) {
         if (auth != null && auth.isAuthenticated()) {
@@ -16,8 +21,4 @@ public class SystemController {
         return "/login";
     }
 
-    @GetMapping("/main")
-    public String mainPage() {
-        return "index"; // 로그인 성공 후 메인 페이지
-    }
 }
